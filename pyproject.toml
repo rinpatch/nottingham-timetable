@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "nottingham-timetable"
+version = "0.1.0"
+description = "UNMC Timetable to ICS converter"
+authors = ["Your Name <your.email@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+icalendar = "^5.0.11"
+pytz = "^2024.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
