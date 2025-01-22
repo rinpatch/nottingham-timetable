@@ -6,11 +6,12 @@ authors = ["Your Name <your.email@example.com>"]
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.12"
 requests = "^2.31.0"
 beautifulsoup4 = "^4.12.3"
 icalendar = "^5.0.11"
 pytz = "^2024.1"
+streamlit = "^1.41.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
