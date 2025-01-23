@@ -3,6 +3,7 @@ from datetime import datetime
 import parser
 from urllib.parse import urlparse
 
+st.set_page_config(page_title="UNMC Timetable to ICS Converter", page_icon=":calendar:")
 st.title("UNMC Timetable to ICS Converter")
 
 st.info("""
