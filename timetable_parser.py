@@ -60,7 +60,11 @@ def parse_table_row(cells, day_offset, cal, academic_year_start, class_filter=No
     day_abbr = ['MO', 'TU', 'WE', 'TH', 'FR']
 
     for week_range in week_ranges:
-        start, end = map(int, week_range.strip().split('-'))
+        start, end = 0, 0
+        if '-' in week_range:
+            start, end = map(int, week_range.strip().split('-'))
+        else:
+            start = end = int(week_range.strip())
 
         # Create a single event with a repeating rule for the current range of weeks
         event = Event()
