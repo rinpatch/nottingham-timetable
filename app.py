@@ -14,8 +14,11 @@ def fetch_class_options(url):
 
 
 def validate_url(url):
+    """Validate the URL is a valid UNMC timetable URL in list view.
+    We don't check the port number, as it seems it's different for different years
+    (i.e 23/24 is 8006, 24/25 is 8016) """
     parsed_url = urlparse(url)
-    return (parsed_url.netloc == "timetablingunmc.nottingham.ac.uk:8016"
+    return (parsed_url.netloc.split(":")[0] == "timetablingunmc.nottingham.ac.uk"
             and parsed_url.path.startswith("/reporting/TextSpreadsheet"))
 
 
