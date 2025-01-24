@@ -44,7 +44,7 @@ def render_page():
     )
 
     academic_year_start = st.date_input(
-        "Academic Year Start Date", datetime(2024, 9, 2))
+        "Week 1 start date (Undergraduates start studying at week 4)", datetime(2024, 9, 2))
 
     if timetable_url and validate_url(timetable_url):
         class_options = fetch_class_options(timetable_url)
